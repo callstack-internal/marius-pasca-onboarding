@@ -1,0 +1,19 @@
+{
+  "name": "react-native-weather",
+  "version": "0.0.0",
+  "description": "get some utilities for weather",
+  "main": "src/index",
+  "codegenConfig": {
+    "name": "RNWeatherSpec",
+    "type": "modules",
+    "jsSrcsDir": "src"
+  },
+  "author": " <> ()",
+  "license": "UNLICENSED",
+  "homepage": "#readme",
+  "create-react-native-library": {
+    "type": "module-new",
+    "languages": "cpp",
+    "version": "0.42.0"
+  }
+}

@@ -3,6 +3,7 @@ import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import chevron_right from '@assets/images/chevron_right.png';
 import { WeatherData } from '@api/weather/types';
 import CityWeather from '@components/CityWeather';
+import { theme } from '@styles/index';
 
 type Props = {
     navigateToDetails: () => void;
@@ -24,11 +25,11 @@ const WeatherListItem: React.FC<Props> = ({ navigateToDetails, data }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
+        backgroundColor: theme.colors.WHITE,
         flexDirection: 'row',
         justifyContent: 'space-between',
         borderBottomWidth: 1,
-        borderBottomColor: '#ccc',
+        borderBottomColor: theme.colors.GREY_LIGHT,
     },
     cityContainer: {
         flex: 1,
