@@ -6,14 +6,17 @@ import { useGroupWeather } from '@api/weather';
 import { WeatherData } from '@api/weather/types';
 import WeatherListItem from './WeatherListItem';
 import { DEFAULT_CITY_IDS } from '@api/weather/mock';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { theme } from '@styles/index';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Weather'>;
 
 const WeatherList: React.FC<Props> = ({ navigation }) => {
+  const { bottom } = useSafeAreaInsets();
   const { data, isLoading, error, refetch } = useGroupWeather(DEFAULT_CITY_IDS);
 
   if (isLoading) return <View style={styles.placeholder}>
-    <ActivityIndicator size="large" color="#f9794e" />
+    <ActivityIndicator size="large" color={theme.colors.PRIMARY} />
   </View>;
 
   if (error) return <View style={styles.placeholder}>
@@ -41,6 +44,7 @@ const WeatherList: React.FC<Props> = ({ navigation }) => {
         onRefresh={refetch}
         ListEmptyComponent={emptyComponent}
         refreshing={isLoading}
+        ListFooterComponent={<View style={{ paddingBottom: bottom }} />}
       />
     </View>
   );
@@ -56,7 +60,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#909090',
+    color: theme.colors.GREY,
   }
 });
 

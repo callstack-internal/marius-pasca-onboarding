@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WeatherList from '@screens/weather';
 import WeatherDetails from '@screens/details';
 import { RootStackParamList } from './types';
+import { theme } from '@styles/index';
 
 export default function Navigation() {
   return (
@@ -18,9 +19,9 @@ function RootNavigator() {
   return (
     <Stack.Navigator initialRouteName='Weather' screenOptions={{
       headerStyle: {
-        backgroundColor: '#f9794e',
+        backgroundColor: theme.colors.PRIMARY,
       },
-      headerTintColor: '#fff',
+      headerTintColor: theme.colors.WHITE,
       headerTitleStyle: {
         fontWeight: 'bold',
         fontSize: 18,

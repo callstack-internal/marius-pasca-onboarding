@@ -3,6 +3,7 @@ import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { RootStackParamList } from '@navigation/types';
 import CityWeather from '@components/CityWeather';
+import { theme } from '@styles/index';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Details'>;
 
@@ -42,11 +43,11 @@ const WeatherDetails: React.FC<Props> = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.WHITE,
   },
   header: {
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: theme.colors.GREY_LIGHT,
   },
   body: {
     flex: 1,
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: theme.colors.GREY_LIGHT,
   },
   statText: {
     fontSize: 18,
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
   statValue: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#909090',
+    color: theme.colors.GREY,
   },
 });
 

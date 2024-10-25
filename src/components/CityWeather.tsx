@@ -11,6 +11,7 @@ import snow from '@assets/images/snow.png';
 import mist from '@assets/images/mist.png';
 import { WeatherData } from '@api/weather/types';
 import { capitalizeLetter } from 'react-native-weather';
+import { theme } from '@styles/index';
 
 type Props = {
     data: WeatherData;
@@ -70,14 +71,14 @@ const styles = StyleSheet.create({
     cityWeather: {
         fontSize: 14,
         fontWeight: '700',
-        color: '#909090',
+        color: theme.colors.GREY,
     },
     weatherIcon: {
         width: 70,
         height: 70,
     },
     tempContainer: {
-        backgroundColor: '#6aa9b8',
+        backgroundColor: theme.colors.SECONDARY,
         paddingHorizontal: 15,
         paddingVertical: 5,
         borderRadius: 50,
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
     tempText: {
         fontWeight: 'bold',
         fontSize: 18,
-        color: 'white',
+        color: theme.colors.WHITE,
     },
 });
 
