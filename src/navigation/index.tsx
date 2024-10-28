@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import WeatherList from '@screens/weather';
+import WeatherComponent from '@screens/weather';
 import WeatherDetails from '@screens/details';
 import { RootStackParamList } from './types';
 import { theme } from '@styles/index';
@@ -27,7 +27,7 @@ function RootNavigator() {
         fontSize: 18,
       },
     }}>
-      <Stack.Screen name="Weather" component={WeatherList} />
+      <Stack.Screen name="Weather" component={WeatherComponent} options={{ headerShown: false }} />
       <Stack.Screen name="Details" component={WeatherDetails} />
     </Stack.Navigator>
   );

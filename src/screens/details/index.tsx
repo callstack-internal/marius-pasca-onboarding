@@ -30,7 +30,7 @@ const WeatherDetails: React.FC<Props> = ({ route }) => {
     </View>
   }
 
-  return <View style={styles.container}>
+  return <View style={styles.container} testID='weather_details'>
     <View style={styles.header}>
       <CityWeather data={data} />
     </View>

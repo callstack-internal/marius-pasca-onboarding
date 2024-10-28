@@ -502,16 +502,16 @@ export const WEATHER_DATA = [
     }
 ]
 
-export const DEFAULT_CITY_IDS = [
-    703448, // Kyiv, UA
-    692194, // Sumy, UA
-    756135, // Warsaw, PL
-    3081368, // Wrocław, PL
-    3067696, // Prague, CZ
-    3077916, // České Budějovice, CZ
-    2950159, // Berlin, DE
-    2867714, // Munich, DE
-    3247449, // Aachen, DE
-    5815135, // Washington, US
-    5128581, // New York City, US
-];
+export const DEFAULT_CITY_IDS = {
+    'Kyiv': 703448, // Kyiv, UA
+    'Sumy': 692194, // Sumy, UA
+    'Warsaw': 756135, // Warsaw, PL
+    'Wrocław': 3081368, // Wrocław, PL
+    'Prague': 3067696, // Prague, CZ
+    'České Budějovice': 3077916, // České Budějovice, CZ
+    'Berlin': 2950159, // Berlin, DE
+    'Munich': 2867714, // Munich, DE
+    'Aachen': 3247449, // Aachen, DE
+    'Washington': 5815135, // Washington, US
+    'New York City': 5128581, // New York City, US
+};
