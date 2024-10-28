@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import CityWeather from './CityWeather';
+import CityWeather from '.';
 import { WEATHER_DATA } from '@api/weather/mock';
 
 jest.mock('@assets/images/clear_sky.png', () => 'clear_sky.png');

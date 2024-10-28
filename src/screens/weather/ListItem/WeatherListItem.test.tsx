@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import WeatherListItem from './WeatherListItem';
+import WeatherListItem from '.';
 import { WEATHER_DATA } from '@api/weather/mock';
 
 const mockNavigateToDetails = jest.fn();
